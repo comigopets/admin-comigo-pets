@@ -10,7 +10,11 @@ auth.onAuthStateChanged(user => {
 });
 
 // Logout
-logoutBtn.addEventListener('click', () => auth.signOut());
+logoutBtn.addEventListener('click', () => {
+  auth.signOut().then(() => {
+    window.location.href = 'index.html';
+  }).catch(err => console.error('Erro ao sair:', err));
+});
 
 // Salvar (create/update)
 form.addEventListener('submit', async (e) => {
@@ -70,4 +74,5 @@ window.excluirPet = async (id) => {
   if (confirm('Tem certeza que deseja excluir?')) {
     await db.collection('pets').doc(id).delete();
   }
+
 };
