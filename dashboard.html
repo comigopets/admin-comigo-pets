@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Pets - Comigo Pets</title>
+  <link rel="stylesheet" href="estilo-dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>Gerenciar Pets</h1>
+    <button id="logout">Sair</button>
+  </header>
+
+  <main>
+    <form id="pet-form">
+      <h2>Cadastrar / Editar Pet</h2>
+      <input type="hidden" id="pet-id">
+
+      <label>Nome: <input type="text" id="nome" required></label>
+      <label>Tipo:
+        <select id="tipo" required>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+        </select>
+      </label>
+      <label>Idade: <input type="text" id="idade" required></label>
+      <label>Sexo:
+        <select id="sexo" required>
+          <option value="macho">Macho</option>
+          <option value="fêmea">Fêmea</option>
+        </select>
+      </label>
+      <label>Raça: <input type="text" id="raca" required></label>
+      <label>Vacinado:
+        <select id="vacinado" required>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+      </label>
+      <label>Vermifugado:
+        <select id="vermifugado" required>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+      </label>
+      <label>Personalidade:
+        <textarea id="personalidade" required></textarea>
+      </label>
+      <label>URL da Imagem: <input type="url" id="imagem" required></label>
+
+      <label>Status:
+        <select id="status" required>
+          <option value="disponivel">Disponível</option>
+          <option value="adotado">Adotado</option>
+        </select>
+      </label>
+
+      <button type="submit">Salvar</button>
+    </form>
+
+    <section>
+      <h2>Pets Cadastrados</h2>
+      <table id="pets-table">
+        <thead>
+          <tr>
+            <th>Nome</th><th>Tipo</th><th>Status</th><th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

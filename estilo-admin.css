@@ -1,0 +1,153 @@
+/* Fonte e cores globais */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fefae0;
+  color: #377d75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: #256d85;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  background-color: #a8e6cf;
+  color: #256d85;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #92d4b6;
+}
+
+.erro {
+  color: #c0392b;
+  margin-top: 12px;
+}
+
+/* === Tablets e notebooks estreitos (até 1024px) === */
+@media (max-width: 1024px) {
+  body {
+    padding: 20px;                /* garante espaçamento nas laterais */
+  }
+
+  .container {
+    max-width: 420px;             /* pode ficar um pouco maior em tablets */
+    padding: 40px 30px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+/* === Smartphones médios (até 768px) === */
+@media (max-width: 768px) {
+  .container {
+    max-width: 340px;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+/* === Smartphones pequenos (até 480px) === */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;                 /* mais espaço nas bordas */
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
