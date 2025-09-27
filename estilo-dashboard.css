@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7f5;
-  color: #333;
+  background: #fefae0;
+  color: #377d75;
 }
 
 header {
@@ -248,4 +248,5 @@ table button:hover {
     padding: 5px 8px;
     font-size: 0.8rem;
   }
+
 }
